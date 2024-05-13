@@ -1,0 +1,42 @@
+export default [
+    {
+        id: 1,
+        nome: 'Hamburger',
+        descricao:'juicy beef patty on a fresh bun with all the fixings',
+        preco:'$5.99',
+        desc:'per item',
+        avatarURL:'https://cdn.pixabay.com/photo/2023/05/29/17/01/hamburger-8026582_1280.jpg',
+    },
+    {
+        id: 2,
+        nome: 'Pizza',
+        descricao:'Freshly made pizza with your choice of toppings',
+        preco:'$9.99',
+        desc:'per item',
+        avatarURL:'https://cdn.pixabay.com/photo/2023/03/20/04/09/pizza-7863716_960_720.jpg',
+    },
+    {
+        id: 3,
+        nome: 'Saland',
+        descricao:'Fresh greens and veggies whith your choice of dressing',
+        preco:'$4.99',
+        desc:'per item',
+        avatarURL:'https://cdn.pixabay.com/photo/2022/12/05/15/45/salad-7637101_960_720.jpg',
+    },
+    {
+        id: 4,
+        nome: 'Fries',
+        descricao:'juicy beef patty on a fresh bun with all the fixings',
+        preco:'$5.99',
+        desc:'per item',
+        avatarURL:'https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcT1rwHV76cR1gwVhjIq9JlfkbZEy6wBK-lg7NhUa__l8L4Klm40-tkX8lpiBWMUDTx0',
+    },
+    {
+        id: 5,
+        nome: 'Ice Cream',
+        descricao:'Rich and creamy,the perfect dessert any time of day',
+        preco:'$2.99',
+        desc:'per item',
+        avatarURL:'https://cdn.pixabay.com/photo/2024/04/20/19/34/chocolate-8709260_960_720.jpg',
+    },
+]
