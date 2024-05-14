@@ -1,9 +1,8 @@
 import React from "react";
-import { View, FlatList, Alert, Text } from 'react-native';
+import { View, FlatList, Alert, Text,Button } from 'react-native';
 import users from "../data/users";
 import { ListItem, Avatar, ThemeProvider } from "@rneui/themed";
 import { StyleSheet } from "react-native";
-import UserForm from "./UserForm";
  
 export default props => {
     function confirmUserinclu(user){
@@ -29,10 +28,12 @@ export default props => {
     function getUserItem({item: user}){
         return(
            <ThemeProvider>
-            <ListItem>
-        <Avatar Style={style.img} source={{uri: user.avatarURL}}/>
+            <ListItem  style={style.separar}>
+
+
+        <Avatar source={{uri: user.avatarURL}}  style={style.img}  />
         <ListItem.Content>
-            <ListItem.Title>{user.nome}</ListItem.Title>
+            <ListItem.Title style={style.nome}>{user.nome}</ListItem.Title>
             <ListItem.Title>{user.descricao}</ListItem.Title>
             <ListItem.Title>{user.preco}</ListItem.Title>
             <ListItem.Title>{user.desc}</ListItem.Title>
@@ -52,13 +53,7 @@ export default props => {
            onPress={() => confirmUsertirar(user)}
           />
           </ListItem>
-          <Button
-                title="Salvar"
-                color={"#0A6847"}
-                onPress={UserForm}
-            />  
         </ThemeProvider>
-       
         )
  
     }
@@ -70,6 +65,10 @@ export default props => {
               data={users}
               renderItem={getUserItem}
             />
+            <Button
+                title="Continue"
+                color={"#0A6847"}
+            />  
         </View>
     )
 }
@@ -77,8 +76,17 @@ export default props => {
 const style = StyleSheet.create(
     {
         img:{
-            width:300,
-            height:300,
+            width:70,
+            height:70,
         },
+        separar:{
+          marginBottom:5,
+          elevation:5,
+          backgroundColor:'white',
+        },
+        nome:{
+          fontSize:20,
+        }
+        }
     }
 )

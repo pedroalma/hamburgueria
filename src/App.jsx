@@ -2,11 +2,10 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { NavigationContainer, StackActions } from '@react-navigation/native'; 
 import { createNativeStackNavigator } from '@react-navigation/native-stack'; 
-import { Button } from '@rneui/themed'; 
-import Icon from 'react-native-vector-icons/Ionicons';
+
 
 import UserListm from './views/UserListm';
-import UserForm from './views/UserForm';
+
 
 
 
@@ -32,20 +31,9 @@ export default props =>{
             component={UserListm}
             options={({ navigation}) =>{
                 return{
-                    title: "Lista de usuario ",
-                    headerRight: () => (
-                        <Button
-                            onPress={() => navigation.navigate('UserForm')}
-                            type='clear'
-                            icon={<Icon name="add" size={20} color="white"/>}
-                        />
-                    )
+                    title: "Cardapio",
                 }
             }}
-            />
-            <Stack.Screen
-            name="UserForm"
-            component={UserForm}
             />
             </Stack.Navigator>
         </NavigationContainer>
